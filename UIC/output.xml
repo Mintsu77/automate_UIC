@@ -1,23 +1,338 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.2 (Python 3.11.1 on win32)" generated="20230424 20:02:30.630" rpa="false">
-<suite id="s1" name="test boardLogin" source="C:\Users\lffintech-010\git\automate_UIC\UIC\TestCase\test_boardLogin.robot">
+<robot generator="Robot 3.2.2 (Python 3.11.1 on win32)" generated="20230424 20:36:53.283" rpa="false">
+<suite id="s1" name="TestCase" source="C:\Users\lffintech-010\git\automate_UIC\UIC\TestCase">
+<suite id="s1-s1" name="test boardForgotPassword" source="C:\Users\lffintech-010\git\automate_UIC\UIC\TestCase\test_boardForgotPassword.robot">
 <kw name="Log" library="BuiltIn" type="setup">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>UIC Project</arg>
 </arguments>
-<msg timestamp="20230424 20:02:30.848" level="INFO">UIC Project</msg>
-<status status="PASS" starttime="20230424 20:02:30.848" endtime="20230424 20:02:30.848"></status>
+<msg timestamp="20230424 20:36:53.504" level="INFO">UIC Project</msg>
+<status status="PASS" starttime="20230424 20:36:53.504" endtime="20230424 20:36:53.506"></status>
 </kw>
-<test id="s1-t1" name="Board_Login_001">
+<test id="s1-s1-t1" name="Board_Forgot_Password_001">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20230424 20:02:30.850" level="INFO">Opening browser 'chrome' to base url 'https://uat.uic.lffintech.co.th/login'.</msg>
-<status status="PASS" starttime="20230424 20:02:30.850" endtime="20230424 20:02:32.762"></status>
+<msg timestamp="20230424 20:36:53.506" level="INFO">Opening browser 'chrome' to base url 'https://uat.uic.lffintech.co.th/login'.</msg>
+<status status="PASS" starttime="20230424 20:36:53.506" endtime="20230424 20:36:55.394"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="first-template"]/div/div/div[2]/form/p/span</arg>
+</arguments>
+<msg timestamp="20230424 20:36:55.395" level="INFO">Clicking element 'xpath=//*[@id="first-template"]/div/div/div[2]/form/p/span'.</msg>
+<status status="PASS" starttime="20230424 20:36:55.395" endtime="20230424 20:36:55.433"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20230424 20:36:57.435" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230424 20:36:55.434" endtime="20230424 20:36:57.435"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="first-template"]/div/div/div[2]/div/form/div[1]/div/div/input</arg>
+<arg>@{USERNAME_PASSWORD}[0]</arg>
+</arguments>
+<msg timestamp="20230424 20:36:57.436" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[0]' syntax is deprecated. Use '${USERNAME_PASSWORD}[0]' instead.</msg>
+<msg timestamp="20230424 20:36:57.436" level="INFO">Typing text 'Mint_CK77@hotmail.com' into text field 'xpath=//*[@id="first-template"]/div/div/div[2]/div/form/div[1]/div/div/input'.</msg>
+<status status="PASS" starttime="20230424 20:36:57.436" endtime="20230424 20:36:57.581"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20230424 20:36:59.581" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230424 20:36:57.581" endtime="20230424 20:36:59.581"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="first-template"]/div/div/div[2]/div/form/button</arg>
+</arguments>
+<msg timestamp="20230424 20:36:59.582" level="INFO">Clicking button 'xpath=//*[@id="first-template"]/div/div/div[2]/div/form/button'.</msg>
+<status status="PASS" starttime="20230424 20:36:59.582" endtime="20230424 20:36:59.649"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/div[2]/div/h2</arg>
+</arguments>
+<status status="PASS" starttime="20230424 20:36:59.650" endtime="20230424 20:37:00.716"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Login Test Completed!!</arg>
+</arguments>
+<msg timestamp="20230424 20:37:00.718" level="INFO">Login Test Completed!!</msg>
+<status status="PASS" starttime="20230424 20:37:00.716" endtime="20230424 20:37:00.718"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This test was executed by %{username} on %{os}</arg>
+</arguments>
+<msg timestamp="20230424 20:37:00.718" level="INFO">This test was executed by lffintech-010 on Windows_NT</msg>
+<status status="PASS" starttime="20230424 20:37:00.718" endtime="20230424 20:37:00.718"></status>
+</kw>
+<doc>ส่งรหัสผ่านเข้าอีเมล สำเร็จ(มีอีเมลในระบบ)</doc>
+<status status="PASS" starttime="20230424 20:36:53.506" endtime="20230424 20:37:00.718" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="Board_Forgot_Password_002">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20230424 20:37:00.721" level="INFO">Opening browser 'chrome' to base url 'https://uat.uic.lffintech.co.th/login'.</msg>
+<status status="PASS" starttime="20230424 20:37:00.721" endtime="20230424 20:37:02.563"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="first-template"]/div/div/div[2]/form/p/span</arg>
+</arguments>
+<msg timestamp="20230424 20:37:02.564" level="INFO">Clicking element 'xpath=//*[@id="first-template"]/div/div/div[2]/form/p/span'.</msg>
+<status status="PASS" starttime="20230424 20:37:02.563" endtime="20230424 20:37:02.605"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20230424 20:37:04.605" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230424 20:37:02.605" endtime="20230424 20:37:04.605"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="first-template"]/div/div/div[2]/div/form/div[1]/div/div/input</arg>
+<arg>@{USERNAME_PASSWORD}[1]</arg>
+</arguments>
+<msg timestamp="20230424 20:37:04.605" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[1]' syntax is deprecated. Use '${USERNAME_PASSWORD}[1]' instead.</msg>
+<msg timestamp="20230424 20:37:04.606" level="INFO">Typing text 'abc@gmail.com' into text field 'xpath=//*[@id="first-template"]/div/div/div[2]/div/form/div[1]/div/div/input'.</msg>
+<status status="PASS" starttime="20230424 20:37:04.605" endtime="20230424 20:37:04.733"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20230424 20:37:06.734" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230424 20:37:04.733" endtime="20230424 20:37:06.734"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="first-template"]/div/div/div[2]/div/form/button</arg>
+</arguments>
+<msg timestamp="20230424 20:37:06.735" level="INFO">Clicking button 'xpath=//*[@id="first-template"]/div/div/div[2]/div/form/button'.</msg>
+<status status="PASS" starttime="20230424 20:37:06.734" endtime="20230424 20:37:06.801"></status>
+</kw>
+<kw name="Alert Message 1 &quot;ข้อมูลไม่ถูกต้อง&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=/html/body/div[2]/p</arg>
+</arguments>
+<status status="PASS" starttime="20230424 20:37:06.801" endtime="20230424 20:37:07.255"></status>
+</kw>
+<status status="PASS" starttime="20230424 20:37:06.801" endtime="20230424 20:37:07.255"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Login Test Completed!!</arg>
+</arguments>
+<msg timestamp="20230424 20:37:07.255" level="INFO">Login Test Completed!!</msg>
+<status status="PASS" starttime="20230424 20:37:07.255" endtime="20230424 20:37:07.255"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This test was executed by %{username} on %{os}</arg>
+</arguments>
+<msg timestamp="20230424 20:37:07.256" level="INFO">This test was executed by lffintech-010 on Windows_NT</msg>
+<status status="PASS" starttime="20230424 20:37:07.256" endtime="20230424 20:37:07.256"></status>
+</kw>
+<doc>ส่งรหัสผ่านเข้าอีเมล ไม่สำเร็จ(ไม่มีอีเมลในระบบ)</doc>
+<status status="PASS" starttime="20230424 20:37:00.720" endtime="20230424 20:37:07.256" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="Board_Forgot_Password_003">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20230424 20:37:07.259" level="INFO">Opening browser 'chrome' to base url 'https://uat.uic.lffintech.co.th/login'.</msg>
+<status status="PASS" starttime="20230424 20:37:07.259" endtime="20230424 20:37:09.211"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="first-template"]/div/div/div[2]/form/p/span</arg>
+</arguments>
+<msg timestamp="20230424 20:37:09.211" level="INFO">Clicking element 'xpath=//*[@id="first-template"]/div/div/div[2]/form/p/span'.</msg>
+<status status="PASS" starttime="20230424 20:37:09.211" endtime="20230424 20:37:09.258"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20230424 20:37:11.259" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230424 20:37:09.258" endtime="20230424 20:37:11.259"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="first-template"]/div/div/div[2]/div/form/div[1]/div/div/input</arg>
+<arg>@{USERNAME_PASSWORD}[2]</arg>
+</arguments>
+<msg timestamp="20230424 20:37:11.260" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[2]' syntax is deprecated. Use '${USERNAME_PASSWORD}[2]' instead.</msg>
+<msg timestamp="20230424 20:37:11.261" level="INFO">Typing text 'adminTest' into text field 'xpath=//*[@id="first-template"]/div/div/div[2]/div/form/div[1]/div/div/input'.</msg>
+<status status="PASS" starttime="20230424 20:37:11.259" endtime="20230424 20:37:11.371"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20230424 20:37:13.372" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230424 20:37:11.371" endtime="20230424 20:37:13.372"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="first-template"]/div/div/div[2]/div/form/button</arg>
+</arguments>
+<msg timestamp="20230424 20:37:13.373" level="INFO">Clicking button 'xpath=//*[@id="first-template"]/div/div/div[2]/div/form/button'.</msg>
+<status status="PASS" starttime="20230424 20:37:13.373" endtime="20230424 20:37:13.439"></status>
+</kw>
+<kw name="Alert Message 2 &quot;กรุณากรอกอีเมลให้ถูกต้อง&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="first-template"]/div/div/div[2]/div/form/div[1]/div/div[2]</arg>
+</arguments>
+<status status="PASS" starttime="20230424 20:37:13.439" endtime="20230424 20:37:13.462"></status>
+</kw>
+<status status="PASS" starttime="20230424 20:37:13.439" endtime="20230424 20:37:13.462"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Login Test Completed!!</arg>
+</arguments>
+<msg timestamp="20230424 20:37:13.463" level="INFO">Login Test Completed!!</msg>
+<status status="PASS" starttime="20230424 20:37:13.463" endtime="20230424 20:37:13.463"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This test was executed by %{username} on %{os}</arg>
+</arguments>
+<msg timestamp="20230424 20:37:13.464" level="INFO">This test was executed by lffintech-010 on Windows_NT</msg>
+<status status="PASS" starttime="20230424 20:37:13.463" endtime="20230424 20:37:13.464"></status>
+</kw>
+<doc>ส่งรหัสผ่านเข้าอีเมล ไม่สำเร็จ(กรอกอีเมลไม่ถูกต้อง)</doc>
+<status status="PASS" starttime="20230424 20:37:07.257" endtime="20230424 20:37:13.464" critical="yes"></status>
+</test>
+<test id="s1-s1-t4" name="Board_Forgot_Password_004">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20230424 20:37:13.466" level="INFO">Opening browser 'chrome' to base url 'https://uat.uic.lffintech.co.th/login'.</msg>
+<status status="PASS" starttime="20230424 20:37:13.466" endtime="20230424 20:37:15.470"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="first-template"]/div/div/div[2]/form/p/span</arg>
+</arguments>
+<msg timestamp="20230424 20:37:15.471" level="INFO">Clicking element 'xpath=//*[@id="first-template"]/div/div/div[2]/form/p/span'.</msg>
+<status status="PASS" starttime="20230424 20:37:15.470" endtime="20230424 20:37:15.527"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20230424 20:37:17.529" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230424 20:37:15.528" endtime="20230424 20:37:17.529"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="first-template"]/div/div/div[2]/div/form/button</arg>
+</arguments>
+<msg timestamp="20230424 20:37:17.529" level="INFO">Clicking button 'xpath=//*[@id="first-template"]/div/div/div[2]/div/form/button'.</msg>
+<status status="PASS" starttime="20230424 20:37:17.529" endtime="20230424 20:37:17.592"></status>
+</kw>
+<kw name="Alert Message 3 &quot;กรุณากรอกอีเมล&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id="first-template"]/div/div/div[2]/div/form/div[1]/div/div[2]</arg>
+</arguments>
+<status status="PASS" starttime="20230424 20:37:17.592" endtime="20230424 20:37:17.834"></status>
+</kw>
+<status status="PASS" starttime="20230424 20:37:17.592" endtime="20230424 20:37:17.834"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Login Test Completed!!</arg>
+</arguments>
+<msg timestamp="20230424 20:37:17.834" level="INFO">Login Test Completed!!</msg>
+<status status="PASS" starttime="20230424 20:37:17.834" endtime="20230424 20:37:17.834"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>This test was executed by %{username} on %{os}</arg>
+</arguments>
+<msg timestamp="20230424 20:37:17.835" level="INFO">This test was executed by lffintech-010 on Windows_NT</msg>
+<status status="PASS" starttime="20230424 20:37:17.835" endtime="20230424 20:37:17.835"></status>
+</kw>
+<doc>ส่งรหัสผ่านเข้าอีเมล ไม่สำเร็จ(กรอกอีเมลไม่ถูกต้อง)</doc>
+<status status="PASS" starttime="20230424 20:37:13.465" endtime="20230424 20:37:17.835" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20230424 20:36:53.302" endtime="20230424 20:37:17.837"></status>
+</suite>
+<suite id="s1-s2" name="test boardLogin" source="C:\Users\lffintech-010\git\automate_UIC\UIC\TestCase\test_boardLogin.robot">
+<kw name="Log" library="BuiltIn" type="setup">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>UIC Project</arg>
+</arguments>
+<msg timestamp="20230424 20:37:17.842" level="INFO">UIC Project</msg>
+<status status="PASS" starttime="20230424 20:37:17.842" endtime="20230424 20:37:17.842"></status>
+</kw>
+<test id="s1-s2-t1" name="Board_Login_001">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20230424 20:37:17.844" level="INFO">Opening browser 'chrome' to base url 'https://uat.uic.lffintech.co.th/login'.</msg>
+<status status="PASS" starttime="20230424 20:37:17.843" endtime="20230424 20:37:19.857"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -25,17 +340,17 @@
 <arg>//*[@id="first-template"]/div/div/div[2]/form/div[1]/div/div/input</arg>
 <arg>@{USERNAME_PASSWORD}[0]</arg>
 </arguments>
-<msg timestamp="20230424 20:02:32.764" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[0]' syntax is deprecated. Use '${USERNAME_PASSWORD}[0]' instead.</msg>
-<msg timestamp="20230424 20:02:32.764" level="INFO">Typing text 'admin_mint@gmail.com' into text field '//*[@id="first-template"]/div/div/div[2]/form/div[1]/div/div/input'.</msg>
-<status status="PASS" starttime="20230424 20:02:32.764" endtime="20230424 20:02:32.954"></status>
+<msg timestamp="20230424 20:37:19.858" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[0]' syntax is deprecated. Use '${USERNAME_PASSWORD}[0]' instead.</msg>
+<msg timestamp="20230424 20:37:19.858" level="INFO">Typing text 'admin_mint@gmail.com' into text field '//*[@id="first-template"]/div/div/div[2]/form/div[1]/div/div/input'.</msg>
+<status status="PASS" starttime="20230424 20:37:19.857" endtime="20230424 20:37:20.077"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20230424 20:02:34.955" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230424 20:02:32.954" endtime="20230424 20:02:34.955"></status>
+<msg timestamp="20230424 20:37:22.078" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230424 20:37:20.077" endtime="20230424 20:37:22.078"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -43,61 +358,61 @@
 <arg>//*[@id="first-template"]/div/div/div[2]/form/div[2]/div/div/input</arg>
 <arg>@{USERNAME_PASSWORD}[1]</arg>
 </arguments>
-<msg timestamp="20230424 20:02:34.955" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[1]' syntax is deprecated. Use '${USERNAME_PASSWORD}[1]' instead.</msg>
-<msg timestamp="20230424 20:02:34.956" level="INFO">Typing text '123456789' into text field '//*[@id="first-template"]/div/div/div[2]/form/div[2]/div/div/input'.</msg>
-<status status="PASS" starttime="20230424 20:02:34.955" endtime="20230424 20:02:35.046"></status>
+<msg timestamp="20230424 20:37:22.079" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[1]' syntax is deprecated. Use '${USERNAME_PASSWORD}[1]' instead.</msg>
+<msg timestamp="20230424 20:37:22.079" level="INFO">Typing text '123456789' into text field '//*[@id="first-template"]/div/div/div[2]/form/div[2]/div/div/input'.</msg>
+<status status="PASS" starttime="20230424 20:37:22.078" endtime="20230424 20:37:22.176"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20230424 20:02:37.046" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230424 20:02:35.046" endtime="20230424 20:02:37.046"></status>
+<msg timestamp="20230424 20:37:24.176" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230424 20:37:22.176" endtime="20230424 20:37:24.176"></status>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <doc>Clicks the button identified by ``locator``.</doc>
 <arguments>
 <arg>//*[@id="first-template"]/div/div/div[2]/form/button</arg>
 </arguments>
-<msg timestamp="20230424 20:02:37.046" level="INFO">Clicking button '//*[@id="first-template"]/div/div/div[2]/form/button'.</msg>
-<status status="PASS" starttime="20230424 20:02:37.046" endtime="20230424 20:02:37.108"></status>
+<msg timestamp="20230424 20:37:24.176" level="INFO">Clicking button '//*[@id="first-template"]/div/div/div[2]/form/button'.</msg>
+<status status="PASS" starttime="20230424 20:37:24.176" endtime="20230424 20:37:24.240"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>xpath=//*[@id="master-data"]/div[2]/div[2]/div/div/div/div[1]/h2</arg>
 </arguments>
-<status status="PASS" starttime="20230424 20:02:37.110" endtime="20230424 20:02:37.554"></status>
+<status status="PASS" starttime="20230424 20:37:24.241" endtime="20230424 20:37:24.513"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>Login Test Completed!!</arg>
 </arguments>
-<msg timestamp="20230424 20:02:37.555" level="INFO">Login Test Completed!!</msg>
-<status status="PASS" starttime="20230424 20:02:37.554" endtime="20230424 20:02:37.555"></status>
+<msg timestamp="20230424 20:37:24.514" level="INFO">Login Test Completed!!</msg>
+<status status="PASS" starttime="20230424 20:37:24.513" endtime="20230424 20:37:24.514"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>This test was executed by %{username} on %{os}</arg>
 </arguments>
-<msg timestamp="20230424 20:02:37.555" level="INFO">This test was executed by lffintech-010 on Windows_NT</msg>
-<status status="PASS" starttime="20230424 20:02:37.555" endtime="20230424 20:02:37.555"></status>
+<msg timestamp="20230424 20:37:24.514" level="INFO">This test was executed by lffintech-010 on Windows_NT</msg>
+<status status="PASS" starttime="20230424 20:37:24.514" endtime="20230424 20:37:24.515"></status>
 </kw>
 <doc>เข้าสู่ระบบสำเร็จ(กรอกอีเมลและรหัสผ่านถูกต้อง)</doc>
-<status status="PASS" starttime="20230424 20:02:30.849" endtime="20230424 20:02:37.556" critical="yes"></status>
+<status status="PASS" starttime="20230424 20:37:17.842" endtime="20230424 20:37:24.515" critical="yes"></status>
 </test>
-<test id="s1-t2" name="Board_Login_002">
+<test id="s1-s2-t2" name="Board_Login_002">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20230424 20:02:37.559" level="INFO">Opening browser 'chrome' to base url 'https://uat.uic.lffintech.co.th/login'.</msg>
-<status status="PASS" starttime="20230424 20:02:37.558" endtime="20230424 20:02:39.362"></status>
+<msg timestamp="20230424 20:37:24.518" level="INFO">Opening browser 'chrome' to base url 'https://uat.uic.lffintech.co.th/login'.</msg>
+<status status="PASS" starttime="20230424 20:37:24.518" endtime="20230424 20:37:26.335"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -105,17 +420,17 @@
 <arg>//*[@id="first-template"]/div/div/div[2]/form/div[1]/div/div/input</arg>
 <arg>@{USERNAME_PASSWORD}[2]</arg>
 </arguments>
-<msg timestamp="20230424 20:02:39.362" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[2]' syntax is deprecated. Use '${USERNAME_PASSWORD}[2]' instead.</msg>
-<msg timestamp="20230424 20:02:39.363" level="INFO">Typing text 'adminTest@gmail.com' into text field '//*[@id="first-template"]/div/div/div[2]/form/div[1]/div/div/input'.</msg>
-<status status="PASS" starttime="20230424 20:02:39.362" endtime="20230424 20:02:39.529"></status>
+<msg timestamp="20230424 20:37:26.335" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[2]' syntax is deprecated. Use '${USERNAME_PASSWORD}[2]' instead.</msg>
+<msg timestamp="20230424 20:37:26.336" level="INFO">Typing text 'adminTest@gmail.com' into text field '//*[@id="first-template"]/div/div/div[2]/form/div[1]/div/div/input'.</msg>
+<status status="PASS" starttime="20230424 20:37:26.335" endtime="20230424 20:37:26.531"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20230424 20:02:41.530" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230424 20:02:39.529" endtime="20230424 20:02:41.530"></status>
+<msg timestamp="20230424 20:37:28.531" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230424 20:37:26.531" endtime="20230424 20:37:28.531"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -123,25 +438,25 @@
 <arg>//*[@id="first-template"]/div/div/div[2]/form/div[2]/div/div/input</arg>
 <arg>@{USERNAME_PASSWORD}[1]</arg>
 </arguments>
-<msg timestamp="20230424 20:02:41.530" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[1]' syntax is deprecated. Use '${USERNAME_PASSWORD}[1]' instead.</msg>
-<msg timestamp="20230424 20:02:41.532" level="INFO">Typing text '123456789' into text field '//*[@id="first-template"]/div/div/div[2]/form/div[2]/div/div/input'.</msg>
-<status status="PASS" starttime="20230424 20:02:41.530" endtime="20230424 20:02:41.627"></status>
+<msg timestamp="20230424 20:37:28.532" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[1]' syntax is deprecated. Use '${USERNAME_PASSWORD}[1]' instead.</msg>
+<msg timestamp="20230424 20:37:28.532" level="INFO">Typing text '123456789' into text field '//*[@id="first-template"]/div/div/div[2]/form/div[2]/div/div/input'.</msg>
+<status status="PASS" starttime="20230424 20:37:28.531" endtime="20230424 20:37:28.619"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20230424 20:02:43.628" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230424 20:02:41.627" endtime="20230424 20:02:43.628"></status>
+<msg timestamp="20230424 20:37:30.620" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230424 20:37:28.619" endtime="20230424 20:37:30.620"></status>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <doc>Clicks the button identified by ``locator``.</doc>
 <arguments>
 <arg>//*[@id="first-template"]/div/div/div[2]/form/button</arg>
 </arguments>
-<msg timestamp="20230424 20:02:43.629" level="INFO">Clicking button '//*[@id="first-template"]/div/div/div[2]/form/button'.</msg>
-<status status="PASS" starttime="20230424 20:02:43.628" endtime="20230424 20:02:43.692"></status>
+<msg timestamp="20230424 20:37:30.621" level="INFO">Clicking button '//*[@id="first-template"]/div/div/div[2]/form/button'.</msg>
+<status status="PASS" starttime="20230424 20:37:30.620" endtime="20230424 20:37:30.687"></status>
 </kw>
 <kw name="Alert Message 1 &quot;อีเมลหรือรหัสผ่านไม่ถูกต้อง!&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
@@ -149,38 +464,38 @@
 <arguments>
 <arg>xpath=/html/body/div[2]/div/h2</arg>
 </arguments>
-<status status="PASS" starttime="20230424 20:02:43.693" endtime="20230424 20:02:43.923"></status>
+<status status="PASS" starttime="20230424 20:37:30.689" endtime="20230424 20:37:31.128"></status>
 </kw>
-<status status="PASS" starttime="20230424 20:02:43.692" endtime="20230424 20:02:43.923"></status>
+<status status="PASS" starttime="20230424 20:37:30.687" endtime="20230424 20:37:31.128"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>Login Test Completed!!</arg>
 </arguments>
-<msg timestamp="20230424 20:02:43.923" level="INFO">Login Test Completed!!</msg>
-<status status="PASS" starttime="20230424 20:02:43.923" endtime="20230424 20:02:43.923"></status>
+<msg timestamp="20230424 20:37:31.129" level="INFO">Login Test Completed!!</msg>
+<status status="PASS" starttime="20230424 20:37:31.129" endtime="20230424 20:37:31.129"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>This test was executed by %{username} on %{os}</arg>
 </arguments>
-<msg timestamp="20230424 20:02:43.924" level="INFO">This test was executed by lffintech-010 on Windows_NT</msg>
-<status status="PASS" starttime="20230424 20:02:43.923" endtime="20230424 20:02:43.924"></status>
+<msg timestamp="20230424 20:37:31.130" level="INFO">This test was executed by lffintech-010 on Windows_NT</msg>
+<status status="PASS" starttime="20230424 20:37:31.129" endtime="20230424 20:37:31.130"></status>
 </kw>
 <doc>เข้าสู่ระบบไม่สำเร็จ(กรอกอีเมลที่ไม่มีในระบบหรือกรอกอีเมลไม่ถูกต้อง)</doc>
-<status status="PASS" starttime="20230424 20:02:37.557" endtime="20230424 20:02:43.924" critical="yes"></status>
+<status status="PASS" starttime="20230424 20:37:24.516" endtime="20230424 20:37:31.130" critical="yes"></status>
 </test>
-<test id="s1-t3" name="Board_Login_003">
+<test id="s1-s2-t3" name="Board_Login_003">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20230424 20:02:43.925" level="INFO">Opening browser 'chrome' to base url 'https://uat.uic.lffintech.co.th/login'.</msg>
-<status status="PASS" starttime="20230424 20:02:43.925" endtime="20230424 20:02:46.577"></status>
+<msg timestamp="20230424 20:37:31.132" level="INFO">Opening browser 'chrome' to base url 'https://uat.uic.lffintech.co.th/login'.</msg>
+<status status="PASS" starttime="20230424 20:37:31.132" endtime="20230424 20:37:33.007"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -188,17 +503,17 @@
 <arg>//*[@id="first-template"]/div/div/div[2]/form/div[1]/div/div/input</arg>
 <arg>@{USERNAME_PASSWORD}[0]</arg>
 </arguments>
-<msg timestamp="20230424 20:02:46.577" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[0]' syntax is deprecated. Use '${USERNAME_PASSWORD}[0]' instead.</msg>
-<msg timestamp="20230424 20:02:46.579" level="INFO">Typing text 'admin_mint@gmail.com' into text field '//*[@id="first-template"]/div/div/div[2]/form/div[1]/div/div/input'.</msg>
-<status status="PASS" starttime="20230424 20:02:46.577" endtime="20230424 20:02:46.727"></status>
+<msg timestamp="20230424 20:37:33.008" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[0]' syntax is deprecated. Use '${USERNAME_PASSWORD}[0]' instead.</msg>
+<msg timestamp="20230424 20:37:33.008" level="INFO">Typing text 'admin_mint@gmail.com' into text field '//*[@id="first-template"]/div/div/div[2]/form/div[1]/div/div/input'.</msg>
+<status status="PASS" starttime="20230424 20:37:33.007" endtime="20230424 20:37:33.249"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20230424 20:02:48.727" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230424 20:02:46.727" endtime="20230424 20:02:48.727"></status>
+<msg timestamp="20230424 20:37:35.249" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230424 20:37:33.249" endtime="20230424 20:37:35.249"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -206,25 +521,25 @@
 <arg>//*[@id="first-template"]/div/div/div[2]/form/div[2]/div/div/input</arg>
 <arg>@{USERNAME_PASSWORD}[3]</arg>
 </arguments>
-<msg timestamp="20230424 20:02:48.728" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[3]' syntax is deprecated. Use '${USERNAME_PASSWORD}[3]' instead.</msg>
-<msg timestamp="20230424 20:02:48.729" level="INFO">Typing text '1234567890' into text field '//*[@id="first-template"]/div/div/div[2]/form/div[2]/div/div/input'.</msg>
-<status status="PASS" starttime="20230424 20:02:48.727" endtime="20230424 20:02:48.827"></status>
+<msg timestamp="20230424 20:37:35.249" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[3]' syntax is deprecated. Use '${USERNAME_PASSWORD}[3]' instead.</msg>
+<msg timestamp="20230424 20:37:35.250" level="INFO">Typing text '1234567890' into text field '//*[@id="first-template"]/div/div/div[2]/form/div[2]/div/div/input'.</msg>
+<status status="PASS" starttime="20230424 20:37:35.249" endtime="20230424 20:37:35.342"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20230424 20:02:50.829" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230424 20:02:48.827" endtime="20230424 20:02:50.829"></status>
+<msg timestamp="20230424 20:37:37.342" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230424 20:37:35.342" endtime="20230424 20:37:37.342"></status>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <doc>Clicks the button identified by ``locator``.</doc>
 <arguments>
 <arg>//*[@id="first-template"]/div/div/div[2]/form/button</arg>
 </arguments>
-<msg timestamp="20230424 20:02:50.829" level="INFO">Clicking button '//*[@id="first-template"]/div/div/div[2]/form/button'.</msg>
-<status status="PASS" starttime="20230424 20:02:50.829" endtime="20230424 20:02:50.896"></status>
+<msg timestamp="20230424 20:37:37.343" level="INFO">Clicking button '//*[@id="first-template"]/div/div/div[2]/form/button'.</msg>
+<status status="PASS" starttime="20230424 20:37:37.342" endtime="20230424 20:37:37.412"></status>
 </kw>
 <kw name="Alert Message 1 &quot;อีเมลหรือรหัสผ่านไม่ถูกต้อง!&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
@@ -232,38 +547,38 @@
 <arguments>
 <arg>xpath=/html/body/div[2]/div/h2</arg>
 </arguments>
-<status status="PASS" starttime="20230424 20:02:50.896" endtime="20230424 20:02:51.343"></status>
+<status status="PASS" starttime="20230424 20:37:37.412" endtime="20230424 20:37:37.861"></status>
 </kw>
-<status status="PASS" starttime="20230424 20:02:50.896" endtime="20230424 20:02:51.343"></status>
+<status status="PASS" starttime="20230424 20:37:37.412" endtime="20230424 20:37:37.861"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>Login Test Completed!!</arg>
 </arguments>
-<msg timestamp="20230424 20:02:51.343" level="INFO">Login Test Completed!!</msg>
-<status status="PASS" starttime="20230424 20:02:51.343" endtime="20230424 20:02:51.343"></status>
+<msg timestamp="20230424 20:37:37.861" level="INFO">Login Test Completed!!</msg>
+<status status="PASS" starttime="20230424 20:37:37.861" endtime="20230424 20:37:37.862"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>This test was executed by %{username} on %{os}</arg>
 </arguments>
-<msg timestamp="20230424 20:02:51.343" level="INFO">This test was executed by lffintech-010 on Windows_NT</msg>
-<status status="PASS" starttime="20230424 20:02:51.343" endtime="20230424 20:02:51.343"></status>
+<msg timestamp="20230424 20:37:37.862" level="INFO">This test was executed by lffintech-010 on Windows_NT</msg>
+<status status="PASS" starttime="20230424 20:37:37.862" endtime="20230424 20:37:37.862"></status>
 </kw>
 <doc>เข้าสู่ระบบไม่สำเร็จ(กรอกรหัสผ่านไม่ถูกต้อง)</doc>
-<status status="PASS" starttime="20230424 20:02:43.924" endtime="20230424 20:02:51.344" critical="yes"></status>
+<status status="PASS" starttime="20230424 20:37:31.131" endtime="20230424 20:37:37.862" critical="yes"></status>
 </test>
-<test id="s1-t4" name=" Board_Login_004">
+<test id="s1-s2-t4" name=" Board_Login_004">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20230424 20:02:51.345" level="INFO">Opening browser 'chrome' to base url 'https://uat.uic.lffintech.co.th/login'.</msg>
-<status status="PASS" starttime="20230424 20:02:51.345" endtime="20230424 20:02:53.214"></status>
+<msg timestamp="20230424 20:37:37.864" level="INFO">Opening browser 'chrome' to base url 'https://uat.uic.lffintech.co.th/login'.</msg>
+<status status="PASS" starttime="20230424 20:37:37.864" endtime="20230424 20:37:39.802"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -271,25 +586,25 @@
 <arg>//*[@id="first-template"]/div/div/div[2]/form/div[1]/div/div/input</arg>
 <arg>@{USERNAME_PASSWORD}[0]</arg>
 </arguments>
-<msg timestamp="20230424 20:02:53.216" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[0]' syntax is deprecated. Use '${USERNAME_PASSWORD}[0]' instead.</msg>
-<msg timestamp="20230424 20:02:53.216" level="INFO">Typing text 'admin_mint@gmail.com' into text field '//*[@id="first-template"]/div/div/div[2]/form/div[1]/div/div/input'.</msg>
-<status status="PASS" starttime="20230424 20:02:53.216" endtime="20230424 20:02:53.402"></status>
+<msg timestamp="20230424 20:37:39.804" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[0]' syntax is deprecated. Use '${USERNAME_PASSWORD}[0]' instead.</msg>
+<msg timestamp="20230424 20:37:39.804" level="INFO">Typing text 'admin_mint@gmail.com' into text field '//*[@id="first-template"]/div/div/div[2]/form/div[1]/div/div/input'.</msg>
+<status status="PASS" starttime="20230424 20:37:39.804" endtime="20230424 20:37:40.004"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20230424 20:02:55.402" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230424 20:02:53.402" endtime="20230424 20:02:55.402"></status>
+<msg timestamp="20230424 20:37:42.005" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230424 20:37:40.005" endtime="20230424 20:37:42.005"></status>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <doc>Clicks the button identified by ``locator``.</doc>
 <arguments>
 <arg>//*[@id="first-template"]/div/div/div[2]/form/button</arg>
 </arguments>
-<msg timestamp="20230424 20:02:55.402" level="INFO">Clicking button '//*[@id="first-template"]/div/div/div[2]/form/button'.</msg>
-<status status="PASS" starttime="20230424 20:02:55.402" endtime="20230424 20:02:55.462"></status>
+<msg timestamp="20230424 20:37:42.006" level="INFO">Clicking button '//*[@id="first-template"]/div/div/div[2]/form/button'.</msg>
+<status status="PASS" starttime="20230424 20:37:42.005" endtime="20230424 20:37:42.065"></status>
 </kw>
 <kw name="Alert Message 2 &quot;กรุณากรอกรหัสผ่าน&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
@@ -297,38 +612,38 @@
 <arguments>
 <arg>xpath=//*[@id="first-template"]/div/div/div[2]/form/div[2]/div/div[2]</arg>
 </arguments>
-<status status="PASS" starttime="20230424 20:02:55.462" endtime="20230424 20:02:55.703"></status>
+<status status="PASS" starttime="20230424 20:37:42.065" endtime="20230424 20:37:42.300"></status>
 </kw>
-<status status="PASS" starttime="20230424 20:02:55.462" endtime="20230424 20:02:55.704"></status>
+<status status="PASS" starttime="20230424 20:37:42.065" endtime="20230424 20:37:42.301"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>Login Test Completed!!</arg>
 </arguments>
-<msg timestamp="20230424 20:02:55.704" level="INFO">Login Test Completed!!</msg>
-<status status="PASS" starttime="20230424 20:02:55.704" endtime="20230424 20:02:55.704"></status>
+<msg timestamp="20230424 20:37:42.301" level="INFO">Login Test Completed!!</msg>
+<status status="PASS" starttime="20230424 20:37:42.301" endtime="20230424 20:37:42.301"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>This test was executed by %{username} on %{os}</arg>
 </arguments>
-<msg timestamp="20230424 20:02:55.705" level="INFO">This test was executed by lffintech-010 on Windows_NT</msg>
-<status status="PASS" starttime="20230424 20:02:55.704" endtime="20230424 20:02:55.705"></status>
+<msg timestamp="20230424 20:37:42.301" level="INFO">This test was executed by lffintech-010 on Windows_NT</msg>
+<status status="PASS" starttime="20230424 20:37:42.301" endtime="20230424 20:37:42.301"></status>
 </kw>
 <doc>เข้าสู่ระบบไม่สำเร็จ(กรอกอีเมลแต่ไม่กรอกรหัสผ่าน)</doc>
-<status status="PASS" starttime="20230424 20:02:51.344" endtime="20230424 20:02:55.705" critical="yes"></status>
+<status status="PASS" starttime="20230424 20:37:37.863" endtime="20230424 20:37:42.301" critical="yes"></status>
 </test>
-<test id="s1-t5" name="Board_Login_005">
+<test id="s1-s2-t5" name="Board_Login_005">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20230424 20:02:55.706" level="INFO">Opening browser 'chrome' to base url 'https://uat.uic.lffintech.co.th/login'.</msg>
-<status status="PASS" starttime="20230424 20:02:55.706" endtime="20230424 20:02:57.674"></status>
+<msg timestamp="20230424 20:37:42.303" level="INFO">Opening browser 'chrome' to base url 'https://uat.uic.lffintech.co.th/login'.</msg>
+<status status="PASS" starttime="20230424 20:37:42.303" endtime="20230424 20:37:44.271"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
@@ -336,25 +651,25 @@
 <arg>//*[@id="first-template"]/div/div/div[2]/form/div[2]/div/div/input</arg>
 <arg>&amp;{LOGINDATA}[valid_password]</arg>
 </arguments>
-<msg timestamp="20230424 20:02:57.675" level="WARN">Accessing variable items using '&amp;{LOGINDATA}[valid_password]' syntax is deprecated. Use '${LOGINDATA}[valid_password]' instead.</msg>
-<msg timestamp="20230424 20:02:57.676" level="INFO">Typing text '123456789' into text field '//*[@id="first-template"]/div/div/div[2]/form/div[2]/div/div/input'.</msg>
-<status status="PASS" starttime="20230424 20:02:57.675" endtime="20230424 20:02:57.845"></status>
+<msg timestamp="20230424 20:37:44.272" level="WARN">Accessing variable items using '&amp;{LOGINDATA}[valid_password]' syntax is deprecated. Use '${LOGINDATA}[valid_password]' instead.</msg>
+<msg timestamp="20230424 20:37:44.273" level="INFO">Typing text '123456789' into text field '//*[@id="first-template"]/div/div/div[2]/form/div[2]/div/div/input'.</msg>
+<status status="PASS" starttime="20230424 20:37:44.272" endtime="20230424 20:37:44.429"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20230424 20:02:59.846" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230424 20:02:57.846" endtime="20230424 20:02:59.846"></status>
+<msg timestamp="20230424 20:37:46.431" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230424 20:37:44.430" endtime="20230424 20:37:46.431"></status>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <doc>Clicks the button identified by ``locator``.</doc>
 <arguments>
 <arg>//*[@id="first-template"]/div/div/div[2]/form/button</arg>
 </arguments>
-<msg timestamp="20230424 20:02:59.847" level="INFO">Clicking button '//*[@id="first-template"]/div/div/div[2]/form/button'.</msg>
-<status status="PASS" starttime="20230424 20:02:59.846" endtime="20230424 20:02:59.911"></status>
+<msg timestamp="20230424 20:37:46.431" level="INFO">Clicking button '//*[@id="first-template"]/div/div/div[2]/form/button'.</msg>
+<status status="PASS" starttime="20230424 20:37:46.431" endtime="20230424 20:37:46.493"></status>
 </kw>
 <kw name="Alert Message 3 &quot;กรุณากรอกอีเมล&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
@@ -362,50 +677,57 @@
 <arguments>
 <arg>xpath=//*[@id="first-template"]/div/div/div[2]/form/div[1]/div/div[2]</arg>
 </arguments>
-<status status="PASS" starttime="20230424 20:02:59.911" endtime="20230424 20:03:00.153"></status>
+<status status="PASS" starttime="20230424 20:37:46.493" endtime="20230424 20:37:46.732"></status>
 </kw>
-<status status="PASS" starttime="20230424 20:02:59.911" endtime="20230424 20:03:00.153"></status>
+<status status="PASS" starttime="20230424 20:37:46.493" endtime="20230424 20:37:46.732"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>Login Test Completed!!</arg>
 </arguments>
-<msg timestamp="20230424 20:03:00.154" level="INFO">Login Test Completed!!</msg>
-<status status="PASS" starttime="20230424 20:03:00.154" endtime="20230424 20:03:00.154"></status>
+<msg timestamp="20230424 20:37:46.732" level="INFO">Login Test Completed!!</msg>
+<status status="PASS" starttime="20230424 20:37:46.732" endtime="20230424 20:37:46.732"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>This test was executed by %{username} on %{os}</arg>
 </arguments>
-<msg timestamp="20230424 20:03:00.154" level="INFO">This test was executed by lffintech-010 on Windows_NT</msg>
-<status status="PASS" starttime="20230424 20:03:00.154" endtime="20230424 20:03:00.154"></status>
+<msg timestamp="20230424 20:37:46.733" level="INFO">This test was executed by lffintech-010 on Windows_NT</msg>
+<status status="PASS" starttime="20230424 20:37:46.733" endtime="20230424 20:37:46.733"></status>
 </kw>
 <doc>เข้าสู่ระบบไม่สำเร็จ(กรอกรหัสผ่านแต่ไม่กรอกอีเมล)</doc>
-<status status="PASS" starttime="20230424 20:02:55.705" endtime="20230424 20:03:00.154" critical="yes"></status>
+<status status="PASS" starttime="20230424 20:37:42.302" endtime="20230424 20:37:46.733" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20230424 20:02:30.632" endtime="20230424 20:03:00.155"></status>
+<status status="PASS" starttime="20230424 20:37:17.839" endtime="20230424 20:37:46.735"></status>
+</suite>
+<status status="PASS" starttime="20230424 20:36:53.284" endtime="20230424 20:37:46.738"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="5" fail="0">Critical Tests</stat>
-<stat pass="5" fail="0">All Tests</stat>
+<stat pass="9" fail="0">Critical Tests</stat>
+<stat pass="9" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="5" fail="0" id="s1" name="test boardLogin">test boardLogin</stat>
+<stat pass="9" fail="0" id="s1" name="TestCase">TestCase</stat>
+<stat pass="4" fail="0" id="s1-s1" name="test boardForgotPassword">TestCase.test boardForgotPassword</stat>
+<stat pass="5" fail="0" id="s1-s2" name="test boardLogin">TestCase.test boardLogin</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230424 20:02:32.764" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[0]' syntax is deprecated. Use '${USERNAME_PASSWORD}[0]' instead.</msg>
-<msg timestamp="20230424 20:02:34.955" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[1]' syntax is deprecated. Use '${USERNAME_PASSWORD}[1]' instead.</msg>
-<msg timestamp="20230424 20:02:39.362" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[2]' syntax is deprecated. Use '${USERNAME_PASSWORD}[2]' instead.</msg>
-<msg timestamp="20230424 20:02:41.530" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[1]' syntax is deprecated. Use '${USERNAME_PASSWORD}[1]' instead.</msg>
-<msg timestamp="20230424 20:02:46.577" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[0]' syntax is deprecated. Use '${USERNAME_PASSWORD}[0]' instead.</msg>
-<msg timestamp="20230424 20:02:48.728" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[3]' syntax is deprecated. Use '${USERNAME_PASSWORD}[3]' instead.</msg>
-<msg timestamp="20230424 20:02:53.216" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[0]' syntax is deprecated. Use '${USERNAME_PASSWORD}[0]' instead.</msg>
-<msg timestamp="20230424 20:02:57.675" level="WARN">Accessing variable items using '&amp;{LOGINDATA}[valid_password]' syntax is deprecated. Use '${LOGINDATA}[valid_password]' instead.</msg>
+<msg timestamp="20230424 20:36:57.436" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[0]' syntax is deprecated. Use '${USERNAME_PASSWORD}[0]' instead.</msg>
+<msg timestamp="20230424 20:37:04.605" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[1]' syntax is deprecated. Use '${USERNAME_PASSWORD}[1]' instead.</msg>
+<msg timestamp="20230424 20:37:11.260" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[2]' syntax is deprecated. Use '${USERNAME_PASSWORD}[2]' instead.</msg>
+<msg timestamp="20230424 20:37:19.858" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[0]' syntax is deprecated. Use '${USERNAME_PASSWORD}[0]' instead.</msg>
+<msg timestamp="20230424 20:37:22.079" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[1]' syntax is deprecated. Use '${USERNAME_PASSWORD}[1]' instead.</msg>
+<msg timestamp="20230424 20:37:26.335" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[2]' syntax is deprecated. Use '${USERNAME_PASSWORD}[2]' instead.</msg>
+<msg timestamp="20230424 20:37:28.532" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[1]' syntax is deprecated. Use '${USERNAME_PASSWORD}[1]' instead.</msg>
+<msg timestamp="20230424 20:37:33.008" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[0]' syntax is deprecated. Use '${USERNAME_PASSWORD}[0]' instead.</msg>
+<msg timestamp="20230424 20:37:35.249" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[3]' syntax is deprecated. Use '${USERNAME_PASSWORD}[3]' instead.</msg>
+<msg timestamp="20230424 20:37:39.804" level="WARN">Accessing variable items using '@{USERNAME_PASSWORD}[0]' syntax is deprecated. Use '${USERNAME_PASSWORD}[0]' instead.</msg>
+<msg timestamp="20230424 20:37:44.272" level="WARN">Accessing variable items using '&amp;{LOGINDATA}[valid_password]' syntax is deprecated. Use '${LOGINDATA}[valid_password]' instead.</msg>
 </errors>
 </robot>
