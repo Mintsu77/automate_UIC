@@ -53,7 +53,8 @@ Board_Login_003
 Board_Login_005
     [Documentation]         เข้าสู่ระบบไม่สำเร็จ(กรอกรหัสผ่านแต่ไม่กรอกอีเมล)
     Open Browser            ${URL}         chrome
-    Input Text              //*[@id="first-template"]/div/div/div[2]/form/div[2]/div/div/input    &{LOGINDATA}[valid_password]
+    Input Text              //*[@id="first-template"]/div/div/div[2]/form/div[2]/div/div/input    @{USERNAME_PASSWORD}[1]
+    Sleep                   2  
     Sleep                   2  
     Click Button            //*[@id="first-template"]/div/div/div[2]/form/button
     Alert Message 3 "กรุณากรอกอีเมล"
@@ -68,12 +69,8 @@ ${URL}            https://uat.uic.lffintech.co.th/login
 #LIST Variables
 @{USERNAME_PASSWORD}    admin_mint@gmail.com  123456789  adminTest@gmail.com  1234567890
 
-#DICTIONARY
-&{LOGINDATA}      valid_userName=admin_mint@gmail.com    valid_password=123456789  invalid_userName1=abc@gmail.com  invalid_password=1234567890
-
 *** Keywords ***
 Alert Message 1 "อีเมลหรือรหัสผ่านไม่ถูกต้อง!"
-#อีเมลหรือรหัสผ่านไม่ถูกต้อง!
     Wait Until Element Is Visible   xpath=/html/body/div[2]/div/h2
     
 Alert Message 2 "กรุณากรอกรหัสผ่าน"

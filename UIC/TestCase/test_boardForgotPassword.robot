@@ -55,10 +55,7 @@ Board_Forgot_Password_004
 ${URL}            https://uat.uic.lffintech.co.th/login
 
 #LIST Variables
-@{USERNAME_PASSWORD}    Mint_CK77@hotmail.com  abc@gmail.com  adminTest  1234567890
-
-#DICTIONARY
-&{LOGINDATA}      valid_userName=admin_mint@gmail.com    valid_password=123456789  invalid_userName1=abc@gmail.com  invalid_password=1234567890
+@{USERNAME_PASSWORD}    Mint_CK77@hotmail.com  abc@gmail.com  adminTest
 
 *** Keywords ***
 Alert Message 1 "ข้อมูลไม่ถูกต้อง"
